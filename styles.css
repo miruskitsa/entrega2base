@@ -74,6 +74,31 @@ body header nav ul li a:active {
   background-color: #d18c00;
   color: #4a2c2a;
 }
+body .galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1, 5rem;
+  padding: 1, 5rem;
+  box-sizing: border-box;
+}
+body .galeria-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .galeria-item-imagen {
+  width: 150px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: 2px solid #d18c00;
+  max-width: 150px;
+}
+body .galeria-item-caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
 body .main-container {
   display: grid;
   grid-template-columns: 1fr 350px;
@@ -195,34 +220,37 @@ body .collage-adoptados img {
   object-fit: cover;
   display: block;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   body .main-container {
     grid-template-columns: 1fr;
     padding: 30px 20px;
   }
-  body nav {
+  body .galeria {
+    grid-template-columns: 2, 1fr;
+  }
+  body .galeria nav {
     flex-direction: column;
     gap: 20px;
   }
-  body nav ul {
+  body .galeria nav ul {
     flex-direction: column;
     gap: 15px;
   }
-  body nav ul li a {
+  body .galeria nav ul li a {
     font-size: 1.3rem;
   }
-  body .imagen {
+  body .galeria .imagen {
     max-width: 100%;
     margin: 0 auto;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) and (max-width: 600px) {
   body .collage-adoptados {
     grid-template-columns: repeat(2, 1fr);
     height: 400px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 900px) and (max-width: 400px) {
   body .collage-adoptados {
     grid-template-columns: 1fr;
     height: 600px;
