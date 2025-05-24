@@ -27,34 +27,36 @@ body header h1 {
   letter-spacing: 3px;
   font-family: "Georgia", serif;
 }
-body nav {
+body header nav {
   display: flex;
   justify-content: space-between;
   position: sticky;
+  top: 0;
+  z-index: 1000;
   align-items: center;
   background-color: #a65e2e;
   padding: 15px 30px;
   box-shadow: 0 2px 5px rgba(74, 44, 42, 0.3);
 }
-body nav img {
+body header nav img {
   width: 120px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
   border-radius: 8px;
 }
-body nav img:hover, body nav img:focus {
+body header nav img:hover, body header nav img:focus {
   transform: scale(1.1);
   outline: none;
 }
-body nav ul {
+body header nav ul {
   list-style: none;
   display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
 }
-body nav ul li a {
+body header nav ul li a {
   color: #fceabb;
   font-weight: 600;
   font-size: 1.2rem;
@@ -62,13 +64,13 @@ body nav ul li a {
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s;
 }
-body nav ul li a:hover, body nav ul li a:focus {
+body header nav ul li a:hover, body header nav ul li a:focus {
   background-color: #f8b500;
   color: #6b3e26;
   outline: none;
   box-shadow: 0 0 8px #f8b500;
 }
-body nav ul li a:active {
+body header nav ul li a:active {
   background-color: #d18c00;
   color: #4a2c2a;
 }
