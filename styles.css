@@ -4,6 +4,29 @@ body .galeria-item {
   align-items: center;
 }
 
+body form button {
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+body .imagen, body header nav img {
+  transition: transform 0.5s ease-in-out;
+}
+body .imagen:hover, body header nav img:hover, body .imagen:focus, body header nav img:focus {
+  transform: scale(1.05);
+  outline: none;
+}
+
+body .collage-adoptados img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 html,
 body {
   height: 100%;
@@ -64,6 +87,8 @@ body header nav ul {
 }
 body header nav ul li a {
   color: #fceabb;
+  font-size: 1.2rem;
+  font-weight: 600;
   font-weight: 600;
   font-size: 1.2rem;
   padding: 8px 15px;
@@ -148,6 +173,8 @@ body .imagen:hover, body .imagen:focus {
 body footer {
   background-color: #a65e2e;
   position: relative;
+  font-size: 1rem;
+  font-weight: 600;
   width: 100%;
   box-sizing: border-box;
   color: #fceabb;

@@ -16,6 +16,14 @@ $ts:0.5s ease-in-out;
   align-items: center;
 }
 
+%btn-style {
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 %img-cuadrada {
   width: 150px;
   max-width: 150px;
@@ -108,6 +116,7 @@ body {
         cursor: pointer;
         transition: transform $ts;
         border-radius: 8px;
+        @extend %hover-scale;
 
         &:hover,
         &:focus {
@@ -126,6 +135,7 @@ body {
         li {
           a {
             color: $color-mascremita;
+            @include responsive-text(1.2rem);
             font-weight: 600;
             font-size: 1.2rem;
             padding: 8px 15px;
@@ -214,10 +224,11 @@ body {
 
   .imagen {
     width: 100%;
+    @extend %hover-scale;
     max-width: 350px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 6px 15px $sombreado-cajas;
+    @include box-shadow($sombreado-cajas, 6px, 15px);
     justify-self: center;
     align-self: center;
     transition:$ts;
@@ -233,6 +244,7 @@ body {
   footer {
     background-color: #a65e2e;
     position: relative;
+    @include responsive-text(1rem, 600);
     width: 100%;
     box-sizing: border-box;
     color: $color-mascremita;
@@ -240,7 +252,7 @@ body {
     padding: 20px 30px;
     font-size: 1rem;
     font-weight: 600;
-    box-shadow: 0 -3px 8px $sombreado-cajas;
+     @include box-shadow($sombreado-cajas, -3px, 8px);
     margin-top: auto;
     font-family: $font-georgia;
   }
@@ -272,6 +284,7 @@ body {
     }
 
     button {
+      @extend %btn-style;
       padding: 12px 30px;
       background-color: $color-amarillo;
       color: #6b3e26;
@@ -280,7 +293,7 @@ body {
       font-weight: 700;
       cursor: pointer;
       transition: background-color 0.3s, transform 0.2s;
-      box-shadow: 0 4px 10px rgba(248, 181, 0, 0.5);
+      @include box-shadow(rgba(248, 181, 0, 0.5), 4px, 10px);
 
       &:hover,
       &:focus {
@@ -320,6 +333,7 @@ body {
     img {
       width: 100%;
       height: 100%;
+      @extend %img-square;
       object-fit: cover;
       display: block;
     }
