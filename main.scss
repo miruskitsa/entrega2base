@@ -6,6 +6,7 @@ $color-naranjita:#d18c00;
 $color-amarillo: #f8b500;
 $color-cremita:#fed97b;
 $color-mascremita: #fceabb;
+$ts:0.5s ease-in-out;
 html,
 body {
   height: 100%;
@@ -52,7 +53,7 @@ body {
         width: 120px;
         height: auto;
         cursor: pointer;
-        transition: transform 0.3s ease;
+        transition: transform $ts;
         border-radius: 8px;
 
         &:hover,
@@ -101,6 +102,7 @@ body {
     gap: 1,5rem;
     padding: 1,5rem;
     box-sizing: border-box;
+    transition: transform $ts;
 
    &-item {
     display: flex;
@@ -112,7 +114,12 @@ body {
       object-fit: cover;
       aspect-ratio: 1/1;
       border: 2px solid $color-naranjita;
-      max-width: 150px
+      max-width: 150px;
+      
+      &:hover,
+      &:focus{
+        transform: scale(1,1);
+      }
     }
 
     &-caption {
@@ -164,7 +171,7 @@ body {
     box-shadow: 0 6px 15px $sombreado-cajas;
     justify-self: center;
     align-self: center;
-    transition: transform 0.3s ease;
+    transition:$ts;
 
     &:hover,
     &:focus {
@@ -176,6 +183,9 @@ body {
 
   footer {
     background-color: #a65e2e;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
     color: $color-mascremita;
     text-align: center;
     padding: 20px 30px;

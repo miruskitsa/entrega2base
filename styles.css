@@ -42,7 +42,7 @@ body header nav img {
   width: 120px;
   height: auto;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease-in-out;
   border-radius: 8px;
 }
 body header nav img:hover, body header nav img:focus {
@@ -80,6 +80,7 @@ body .galeria {
   gap: 1, 5rem;
   padding: 1, 5rem;
   box-sizing: border-box;
+  transition: transform 0.5s ease-in-out;
 }
 body .galeria-item {
   display: flex;
@@ -92,6 +93,9 @@ body .galeria-item-imagen {
   aspect-ratio: 1/1;
   border: 2px solid #d18c00;
   max-width: 150px;
+}
+body .galeria-item-imagen:hover, body .galeria-item-imagen:focus {
+  transform: scale(1, 1);
 }
 body .galeria-item-caption {
   margin-top: 0.5rem;
@@ -132,7 +136,7 @@ body .imagen {
   box-shadow: 0 6px 15px rgba(74, 44, 42, 0.3);
   justify-self: center;
   align-self: center;
-  transition: transform 0.3s ease;
+  transition: 0.5s ease-in-out;
 }
 body .imagen:hover, body .imagen:focus {
   transform: scale(1.08);
@@ -141,6 +145,9 @@ body .imagen:hover, body .imagen:focus {
 }
 body footer {
   background-color: #a65e2e;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
   color: #fceabb;
   text-align: center;
   padding: 20px 30px;
