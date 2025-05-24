@@ -1,15 +1,14 @@
-//variables
-$color-marroncito:#4a2c2a;
+// Variables
+$color-marroncito: #4a2c2a;
 $font-georgia: "Georgia", serif;
-$sombreado-cajas:rgba(74, 44, 42, 0.3);
-$color-naranjita:#d18c00;
+$sombreado-cajas: rgba(74, 44, 42, 0.3);
+$color-naranjita: #d18c00;
 $color-amarillo: #f8b500;
-$color-cremita:#fed97b;
+$color-cremita: #fed97b;
 $color-mascremita: #fceabb;
-$ts:0.5s ease-in-out;
+$ts: 0.5s ease-in-out;
 
-
-// para aplicar despues
+// Placeholders para @extend
 %flex-center {
   display: flex;
   justify-content: center;
@@ -24,24 +23,6 @@ $ts:0.5s ease-in-out;
   cursor: pointer;
 }
 
-%img-cuadrada {
-  width: 150px;
-  max-width: 150px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border: 2px solid $color-naranjita;
-}
-
-%boton-estilo {
-  padding: 12px 30px;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(248, 181, 0, 0.5);
-}
-
 %hover-scale {
   transition: transform $ts;
   &:hover,
@@ -53,15 +34,17 @@ $ts:0.5s ease-in-out;
 
 %img-square {
   width: 100%;
+  max-width: 100x;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-//mixis
+// Mixins
 @mixin box-shadow($color, $y: 4px, $blur: 6px) {
   box-shadow: 0 $y $blur $color;
 }
+
 @mixin responsive-text($size, $weight: 600) {
   font-size: $size;
   font-weight: $weight;
@@ -82,7 +65,6 @@ body {
   display: flex;
   flex-direction: column;
 
-   
   header {
     background-color: $color-cremita;
     padding: 30px 20px;
@@ -109,20 +91,12 @@ body {
       padding: 15px 30px;
       @include box-shadow($sombreado-cajas);
 
-
       img {
-        width: 120px;
+        width: 100px;
         height: auto;
         cursor: pointer;
-        transition: transform $ts;
-        border-radius: 8px;
         @extend %hover-scale;
-
-        &:hover,
-        &:focus {
-          transform: scale(1.1);
-          outline: none;
-        }
+        border-radius: 8px;
       }
 
       ul {
@@ -136,8 +110,6 @@ body {
           a {
             color: $color-mascremita;
             @include responsive-text(1.2rem);
-            font-weight: 600;
-            font-size: 1.2rem;
             padding: 8px 15px;
             border-radius: 8px;
             transition: background-color 0.3s, color 0.3s;
@@ -159,37 +131,35 @@ body {
       }
     }
   }
-   .galeria {
+
+  .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1,5rem;
-    padding: 1,5rem;
+    gap: 1.5rem; 
+    padding: 1.5rem;
     box-sizing: border-box;
     transition: transform $ts;
 
-   &-item {
-    @extend %flex-center;
-    flex-direction: column;
-    align-items: center;
+    &-item {
+      @extend %flex-center;
+      flex-direction: column;
 
-    &-imagen {
-      width: 150px;
-      object-fit: cover;
-      aspect-ratio: 1/1;
-      border: 2px solid $color-naranjita;
-      max-width: 150px;
+      &-imagen {
+        width: 150px;
+        aspect-ratio: 1/1;
+        border: 2px solid $color-naranjita;
+        max-width: 150px;
+        object-fit: cover;
+      }
 
+      &-caption {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        text-align: center;
+        font-family: $font-georgia;
+      }
     }
-
-    &-caption {
-      margin-top: 0.5rem;
-      font-size: 0.875rem;
-      text-align: center;
-      font-family: $font-georgia;
-    }
-   }
- }
-
+  }
 
   .main-container {
     display: grid;
@@ -224,19 +194,16 @@ body {
 
   .imagen {
     width: 100%;
-    @extend %hover-scale;
     max-width: 350px;
     height: auto;
     border-radius: 20px;
     @include box-shadow($sombreado-cajas, 6px, 15px);
     justify-self: center;
     align-self: center;
-    transition:$ts;
+    @extend %hover-scale;
 
     &:hover,
     &:focus {
-      transform: scale(1.08);
-      outline: none;
       box-shadow: 0 8px 20px rgba(248, 181, 0, 0.6);
     }
   }
@@ -244,19 +211,17 @@ body {
   footer {
     background-color: #a65e2e;
     position: relative;
-    @include responsive-text(1rem, 600);
     width: 100%;
     box-sizing: border-box;
     color: $color-mascremita;
     text-align: center;
     padding: 20px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-     @include box-shadow($sombreado-cajas, -3px, 8px);
+    @include responsive-text(1rem, 600);
+    @include box-shadow($sombreado-cajas, -3px, 8px);
     margin-top: auto;
     font-family: $font-georgia;
   }
-  // formulario
+
   form {
     display: flex;
     flex-direction: column;
@@ -285,14 +250,8 @@ body {
 
     button {
       @extend %btn-style;
-      padding: 12px 30px;
       background-color: $color-amarillo;
       color: #6b3e26;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s, transform 0.2s;
       @include box-shadow(rgba(248, 181, 0, 0.5), 4px, 10px);
 
       &:hover,
@@ -331,11 +290,7 @@ body {
     height: 300px;
 
     img {
-      width: 100%;
-      height: 100%;
       @extend %img-square;
-      object-fit: cover;
-      display: block;
     }
   }
 
@@ -344,8 +299,11 @@ body {
       grid-template-columns: 1fr;
       padding: 30px 20px;
     }
-   .galeria { 
-    grid-template-columns: (2, 1fr);
+
+    .galeria {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     nav {
       flex-direction: column;
       gap: 20px;
@@ -381,5 +339,4 @@ body {
       height: 600px;
     }
   }
-}
 }
