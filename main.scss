@@ -7,6 +7,36 @@ $color-amarillo: #f8b500;
 $color-cremita:#fed97b;
 $color-mascremita: #fceabb;
 $ts:0.5s ease-in-out;
+
+
+// para aplicar despues
+%img-cuadrada {
+  width: 150px;
+  max-width: 150px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 2px solid $color-naranjita;
+}
+
+%boton-estilo {
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(248, 181, 0, 0.5);
+}
+
+%hover-scale {
+  transition: transform $ts;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    outline: none;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -115,11 +145,7 @@ body {
       aspect-ratio: 1/1;
       border: 2px solid $color-naranjita;
       max-width: 150px;
-      
-      &:hover,
-      &:focus{
-        transform: scale(1,1);
-      }
+
     }
 
     &-caption {

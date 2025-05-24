@@ -94,9 +94,6 @@ body .galeria-item-imagen {
   border: 2px solid #d18c00;
   max-width: 150px;
 }
-body .galeria-item-imagen:hover, body .galeria-item-imagen:focus {
-  transform: scale(1, 1);
-}
 body .galeria-item-caption {
   margin-top: 0.5rem;
   font-size: 0.875rem;
