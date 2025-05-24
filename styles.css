@@ -139,7 +139,6 @@ body main section {
 body main .section-1 {
   display: flex;
   justify-content: space-between;
-  gap: 10x;
 }
 body main h2 {
   color: #6b3e26;

@@ -69,7 +69,7 @@ body {
     background-color: $color-cremita;
     padding: 30px 20px;
     text-align: center;
-    @include box-shadow(rgba(255, 50, 35, 0.3));
+    @include box-shadow(rgba(255, 50, 35, 0.3)); 
 
     h1 {
       margin: 0;
@@ -131,7 +131,7 @@ body {
       }
     }
   }
-
+// collage en index y nosotros.html
   .galeria {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -179,8 +179,8 @@ body {
    .section-1 {
     display: flex;
     justify-content: space-between;
-    gap: 10x;
    }
+
     h2 {
       color: #6b3e26;
       font-size: 2.5rem;
@@ -297,7 +297,7 @@ body {
       @extend %img-square;
     }
   }
-
+// responsive
   @media (max-width: 900px) {
     .main-container {
       grid-template-columns: 1fr;
