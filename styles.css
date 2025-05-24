@@ -136,6 +136,11 @@ body .main-container {
 body main section {
   text-align: center;
 }
+body main .section-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10x;
+}
 body main h2 {
   color: #6b3e26;
   font-size: 2.5rem;

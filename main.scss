@@ -176,7 +176,11 @@ body {
     section {
       text-align: center;
     }
-
+   .section-1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10x;
+   }
     h2 {
       color: #6b3e26;
       font-size: 2.5rem;
