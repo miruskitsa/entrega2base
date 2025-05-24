@@ -1,0 +1,22 @@
+{
+  "name": "entrega3",
+  "version": "1.0.0",
+  "description": "Este es mi resultado de la entrega 3 en la  que estuvimos trabajando a lo largo de las clases en \"Coderhouse\" espero les guste.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch main.scss styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miruskitsa/entrega3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miruskitsa/entrega3/issues"
+  },
+  "homepage": "https://github.com/miruskitsa/entrega3#readme",
+  "dependencies": {
+    "sass": "^1.89.0"
+  }
+}
