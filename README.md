@@ -1,4 +1,5 @@
-# Entrega 3
+# Entrega final
 
 
-Este es mi resultado de la entrega 3 en la  que estuvimos trabajando a lo largo de las clases en "Coderhouse" espero les guste.
+Este es el resultado de la entrega final de mi sitio web con coderhouse. 
+Cree un sitio web pensado para un refugio de animales. Espero les guste!
